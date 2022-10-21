@@ -5,7 +5,19 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Products</h2>
+
+<form class="form-inline" action="/products/index">
+    <label for="search">Search:</label>
+    <input 
+           type="search" 
+           class="form-control" 
+           id="search" 
+           name="search" 
+           placeholder="Search" 
+           value="@ViewBag.search"/>
+    <button type="submit" class="btn btn-primary">GO</button>
+</form>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -61,7 +73,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.ProductID }) |*@
+            <a href="/products/details/@item.ProductID">Details</a> |
             @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
         </td>
     </tr>

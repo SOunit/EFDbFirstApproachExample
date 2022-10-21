@@ -234,6 +234,7 @@
     <Content Include="Views\Categories\Index.cshtml" />
     <Content Include="Views\Brands\Index.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
